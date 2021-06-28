@@ -120,6 +120,11 @@ img{
    bottom: 25px;
    right: 20px;
 }
+.main-mid{
+    width: 100%;
+    height: calc(100vh - 60px - 70px);
+    overflow-y: scroll;
+}
 footer{
     background-color: lightgray;
     height: 60px;
