@@ -14,16 +14,17 @@ body{
 }
 .container{
     margin: auto;
-    max-width: 150vh;
+    width: 150vh;
     height: 200px;
     
     background-color: white;
 }
 .sez-sinistra{
-    background-color: red;
+    background-color: white;
     height: 700px;
     width: 50vh;
     float: left;
+    
 
 }
 .sez-destra{
@@ -32,6 +33,11 @@ body{
     width: 100vh;
     border-left: 1px solid black;
     float: left;
+}
+.main-top{
+    background-color: white;
+    height: 70px;
+    width: 100%;
 }
 .clearfix::after{
     display: table;
@@ -80,4 +86,32 @@ body{
     color: gray;
     margin-left: 10px;
     font-size: 20px;
+}
+.box-contatti{
+    overflow-y: scroll;
+    height: 500px;
+}
+img{
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+.contatti{
+    display: flex;
+    margin-top: 20px;
+}
+.contatti h2{
+ margin-left: 10px;
+ font-size: 20px;
+}
+.contatto-attivo{
+    display: flex;
+    
+}
+.descrizione-user{
+    display: flex;
+}
+.pannello-controllo{
+    display: flex;
+    justify-content: flex-end;
 }
