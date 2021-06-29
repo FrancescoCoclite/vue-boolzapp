@@ -48,39 +48,14 @@
 
                     
                     <div class="box-contatti">
-                        <div class="contatti">
+                        <div class="contatti" v-for="(elemento, index) in contacts">
                          <div class="img-contatti">
-                             <img src="img/Img/avatar_1.jpg" alt="avatar">
+                             <img v-bind:src="'img/Img/avatar' + elemento.avatar + '.jpg'" alt="avatar">
                          </div>
-                         <h2>Michele</h2>
-                        </div>
-
-                        <div class="contatti">
-                            <div class="img-contatti">
-                                <img src="img/Img/avatar_2.jpg" alt="avatar">
-                            </div>
-                            <h2>Giorgio</h2>
-                        </div>
-
-                        <div class="contatti">
-                            <div class="img-contatti">
-                                <img src="img/Img/avatar_3.jpg" alt="avatar">
-                            </div>
-                            <h2>Marco</h2>
-                        </div>
-                        <div class="contatti">
-                            <div class="img-contatti">
-                                <img src="img/Img/avatar_5.jpg" alt="avatar">
-                            </div>
-                            <h2>Francesco</h2>
-                        </div>
-                        <div class="contatti">
-                            <div class="img-contatti">
-                                <img src="img/Img/avatar_6.jpg" alt="avatar">
-                            </div>
-                            <h2>Laura</h2>
+                         <h2>{{elemento.name}}</h2>
                         </div>
                     </div>
+                        
 
                     
                 </div>
@@ -101,6 +76,15 @@
                     </div>
                     
                     <div class="main-mid">
+                        <div v-for="(elemento, index) in contacts[0].messages">
+                            <div id="messaggio" class="recive">
+                                <p>{{elemento.text}}</p>
+                                <p>{{elemento.date}}</p>
+                            </div>
+                            <div class="answer"></div>
+                            <div class="answer"></div>
+
+                        </div>
 
 
                     </div>

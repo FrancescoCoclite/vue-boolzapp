@@ -5,6 +5,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        counter : 0,
         contacts: [
             {
             name: 'Michele',
@@ -50,6 +51,106 @@ var app = new Vue({
             status: 'sent'
             }
             ],
-            },]
+            },
+        {
+            name: 'Giorgio',
+            avatar: '_3',
+            visible: true,
+            messages: [
+            {
+            date: '10/01/2020 15:30:55',
+            text: 'Hai portato a spasso il cane?',
+            status: 'sent'
+            },
+            {
+            date: '10/01/2020 15:50:00',
+            text: 'Ricordati di dargli da mangiare',
+            status: 'sent'
+            },
+            {
+            date: '10/01/2020 16:15:22',
+            text: 'Tutto fatto!',
+            status: 'received'
+            }
+            ],
+            },
+            {
+            name: 'Marco',
+            avatar: '_4',
+            visible: true,
+            messages: [
+            {
+            date: '10/01/2020 15:30:55',
+            text: 'Hai portato a spasso il cane?',
+            status: 'sent'
+            },
+            {
+            date: '10/01/2020 15:50:00',
+            text: 'Ricordati di dargli da mangiare',
+            status: 'sent'
+            },
+            {
+            date: '10/01/2020 16:15:22',
+            text: 'Tutto fatto!',
+            status: 'received'
+            }
+            ],
+            },
+            {
+            name: 'Francesco',
+            avatar: '_5',
+            visible: true,
+            messages: [
+            {
+            date: '10/01/2020 15:30:55',
+            text: 'Hai portato a spasso il cane?',
+            status: 'sent'
+            },
+            {
+            date: '10/01/2020 15:50:00',
+            text: 'Ricordati di dargli da mangiare',
+            status: 'sent'
+            },
+            {
+            date: '10/01/2020 16:15:22',
+            text: 'Tutto fatto!',
+            status: 'received'
+            }
+            ],
+            }
+            ,{
+            name: 'Laura',
+            avatar: '_6',
+            visible: true,
+            messages: [
+            {
+            date: '10/01/2020 15:30:55',
+            text: 'Hai portato a spasso il cane?',
+            status: 'sent'
+            },
+            {
+            date: '10/01/2020 15:50:00',
+            text: 'Ricordati di dargli da mangiare',
+            status: 'sent'
+            },
+            {
+            date: '10/01/2020 16:15:22',
+            text: 'Tutto fatto!',
+            status: 'received'
+            }
+            ],
+        },],
+        methods :{
+            msg(){
+                if (this.status == 'received') {
+                    document.getElementById('messaggio').innerHTML += this.elemento.text + this.elemento.date
+                    
+                }
+                }
+            },
+            
+        }
+        
     }
+    
   })
