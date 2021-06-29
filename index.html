@@ -76,13 +76,26 @@
                     </div>
                     
                     <div class="main-mid">
-                        <div v-for="(elemento, index) in contacts[0].messages">
-                            <div id="messaggio" class="recive">
-                                <p>{{elemento.text}}</p>
-                                <p>{{elemento.date}}</p>
+                        <div v-for="(elemento, index) in contacts[5].messages">
+                            <div v-if="elemento.status == 'received'" class="answer">
+                                <div class="messaggio">
+                                    {{elemento.text}}
+                                </div>
+
+                                <div class="data">
+                                    {{elemento.date}}
+                                </div>
+                                
                             </div>
-                            <div class="answer"></div>
-                            <div class="answer"></div>
+                            <div v-else class="received" >
+                                <div class="messaggio-risp">
+                                    {{elemento.text}}
+                                </div>
+
+                                <div class="data">
+                                    {{elemento.date}}
+                                </div>
+                            </div>
 
                         </div>
 

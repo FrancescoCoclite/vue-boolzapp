@@ -125,30 +125,23 @@ var app = new Vue({
             messages: [
             {
             date: '10/01/2020 15:30:55',
-            text: 'Hai portato a spasso il cane?',
+            text: 'Usciamo?',
             status: 'sent'
             },
             {
             date: '10/01/2020 15:50:00',
-            text: 'Ricordati di dargli da mangiare',
+            text: 'Guido io',
             status: 'sent'
             },
             {
             date: '10/01/2020 16:15:22',
-            text: 'Tutto fatto!',
+            text: 'Dajeee',
             status: 'received'
             }
             ],
         },],
         methods :{
-            msg(){
-                if (this.status == 'received') {
-                    document.getElementById('messaggio').innerHTML += this.elemento.text + this.elemento.date
-                    
-                }
-                }
-            },
-            
+             
         }
         
     }
