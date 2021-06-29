@@ -5,7 +5,7 @@
 var app = new Vue({
     el: '#app',
     data: {
-        counter : 0,
+        count : 0,
         contacts: [
             {
             name: 'Michele',
@@ -59,17 +59,17 @@ var app = new Vue({
             messages: [
             {
             date: '10/01/2020 15:30:55',
-            text: 'Hai portato a spasso il cane?',
+            text: 'Ciao',
             status: 'sent'
             },
             {
             date: '10/01/2020 15:50:00',
-            text: 'Ricordati di dargli da mangiare',
+            text: 'Piacere Marco',
             status: 'sent'
             },
             {
             date: '10/01/2020 16:15:22',
-            text: 'Tutto fatto!',
+            text: 'Piacere Ugo!',
             status: 'received'
             }
             ],
@@ -81,12 +81,12 @@ var app = new Vue({
             messages: [
             {
             date: '10/01/2020 15:30:55',
-            text: 'Hai portato a spasso il cane?',
+            text: 'Hai preso la medicina?',
             status: 'sent'
             },
             {
             date: '10/01/2020 15:50:00',
-            text: 'Ricordati di dargli da mangiare',
+            text: 'Va presa ogni 4 ore',
             status: 'sent'
             },
             {
@@ -103,17 +103,17 @@ var app = new Vue({
             messages: [
             {
             date: '10/01/2020 15:30:55',
-            text: 'Hai portato a spasso il cane?',
+            text: 'Vorrei prendere una gattina',
             status: 'sent'
             },
             {
             date: '10/01/2020 15:50:00',
-            text: 'Ricordati di dargli da mangiare',
+            text: 'É davvero bellissima',
             status: 'sent'
             },
             {
             date: '10/01/2020 16:15:22',
-            text: 'Tutto fatto!',
+            text: 'Che bellooo',
             status: 'received'
             }
             ],
@@ -140,10 +140,13 @@ var app = new Vue({
             }
             ],
         },],
-        methods :{
-             
-        }
         
+    },
+    methods :{
+        newUser(item,index){
+            this.count=index;
+        }
+         
     }
     
   })
