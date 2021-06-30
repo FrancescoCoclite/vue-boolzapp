@@ -5,6 +5,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        nuovoMex: '',
         count : 0,
         contacts: [
             {
@@ -145,7 +146,19 @@ var app = new Vue({
     methods :{
         newUser(item,index){
             this.count=index;
-        }
+        },
+        addMex(){
+            if (this.nuovoMex == ''){
+                return false
+            }else{
+                this.messaggi.push(this.nuovoMex)
+                this.nuovoMex = '';
+            }
+        },
+        remove(index){
+            console.log(index);
+            this.messaggi.splice(index,1)
+        },
          
     }
     

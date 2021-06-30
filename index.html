@@ -22,7 +22,7 @@
 
                     <div class="nav-sx clearfix">
                         <img src="img/Img/avatar_io.jpg" alt="">
-                        <h2>Nome utente</h2>
+                        <h2>Giorgia Rossi</h2>
                     </div>
 
                     <div class="nav-dx clearfix">
@@ -63,9 +63,9 @@
 
                 <div class="sez-destra clearfix">
                     <div class="main-top">
-                        <img src="img/Img/avatar_1.jpg" alt="">
+                        <img :src="'img/Img/avatar' + contacts[this.count].avatar + '.jpg'" alt="">
                         <div class="contatto-attivo">
-                            <h2>Michele</h2>
+                            <h2>{{contacts[this.count].name}}</h2>
                             <p>Ultimo accesso oggi alle</p>
                         </div>
                         <div class="pannello-controllo">
@@ -91,7 +91,7 @@
                                 <div class="messaggio-risp">
                                     {{elemento.text}}
                                 </div>
-
+                                
                                 <div class="data">
                                     {{elemento.date}}
                                 </div>
@@ -105,7 +105,7 @@
                     <footer>
 
                         <i class="far fa-smile"></i>
-                        <input type="text">
+                        <input type="text" placeholder="Inserisci un messaggio" @keyup.enter="addMex">
                         <i class="fas fa-microphone"></i>
 
                     </footer>
