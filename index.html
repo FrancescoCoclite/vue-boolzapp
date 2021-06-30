@@ -79,7 +79,9 @@
                         <div v-for="(elemento, index) in contacts[this.count].messages">
                             <div v-if="elemento.status == 'received'" class="answer">
                                 <div class="messaggio">
+                                    <i class="fas fa-paperclip"></i>
                                     {{elemento.text}}
+
                                 </div>
 
                                 <div class="data">
@@ -105,7 +107,7 @@
                     <footer>
 
                         <i class="far fa-smile"></i>
-                        <input type="text" placeholder="Inserisci un messaggio" @keyup.enter="addMex">
+                        <input type="text" placeholder="Inserisci un messaggio" @keyup.enter="addMex" v-model="nuovoMex">
                         <i class="fas fa-microphone"></i>
 
                     </footer>

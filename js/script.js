@@ -144,20 +144,30 @@ var app = new Vue({
         
     },
     methods :{
-        newUser(item,index){
+        newUser(element,index){
             this.count=index;
         },
         addMex(){
-            if (this.nuovoMex == ''){
-                return false
-            }else{
-                this.messaggi.push(this.nuovoMex)
-                this.nuovoMex = '';
-            }
+
+            this.contacts[this.count].messages.push({
+            date: '10/01/2020 15:30:55',
+            text: this.nuovoMex,
+            status: 'received'
+            })
+            this.nuovoMex = '';
+            setTimeout(function(){ 
+                
+                app.contacts[app.count].messages.push({
+                    date: '10/01/2020 15:30:55',
+                    text: 'ok',
+                    status: 'sent'
+                    })
+            }, 1000);
         },
+
         remove(index){
             console.log(index);
-            this.messaggi.splice(index,1)
+            this.contacts[this.count].messages.splice(index,1)
         },
          
     }
