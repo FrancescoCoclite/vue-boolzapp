@@ -5,6 +5,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        search: '',
         nuovoMex: '',
         count : 0,
         contacts: [
@@ -169,7 +170,29 @@ var app = new Vue({
             console.log(index);
             this.contacts[this.count].messages.splice(index,1)
         },
-         
+        
+            
+        cercaUser(){
+            if( this.search == ""){
+                for(var i=0; i< this.contacts.length; i++){
+                    this.contacts[i].visible = true;
+                }
+            }
+            else{
+                for(var i=0; i< this.contacts.length; i++){
+                    user = this.contacts[i].name.toLowerCase();
+                    search = this.search.toLowerCase();
+                    if(user.includes(search)){
+                        this.contacts[i].visible =true;
+                    }
+                    else{
+                        this.contacts[i].visible = false;
+                    }
+                }
+            };
+            
+        },
+        
     }
     
   })

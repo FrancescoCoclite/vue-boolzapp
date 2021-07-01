@@ -43,7 +43,7 @@
 
                     <div class="sez-cerca">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search" @keyup="cercaUser()" :onchange="cercaUser()">
                     </div>
 
                     
@@ -52,7 +52,7 @@
                             <div class="img-contatti">
                                 <img v-bind:src="'img/Img/avatar' + elemento.avatar + '.jpg'" alt="avatar">
                             </div>
-                            <h2>{{elemento.name}}</h2>
+                            <h2 id="user">{{elemento.name}}</h2>
                         </div>
                     </div>
                         
@@ -79,7 +79,7 @@
                         <div v-for="(elemento, index) in contacts[this.count].messages">
                             <div v-if="elemento.status == 'received'" class="answer">
                                 <div class="messaggio">
-                                    <i class="fas fa-paperclip"></i>
+                                
                                     {{elemento.text}}
 
                                 </div>
