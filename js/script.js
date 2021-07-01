@@ -180,7 +180,7 @@ var app = new Vue({
             }
             else{
                 for(var i=0; i< this.contacts.length; i++){
-                    user = this.contacts[i].name.toLowerCase();
+                    let user = this.contacts[i].name.toLowerCase();
                     search = this.search.toLowerCase();
                     if(user.includes(search)){
                         this.contacts[i].visible =true;
