@@ -48,11 +48,11 @@
 
                     
                     <div class="box-contatti">
-                        <div class="contatti" v-for="(elemento, index) in contacts" @click="newUser(elemento,index)">
+                        <div v-if="elemento.visible == true" class="contatti" v-for="(elemento, index) in contacts" @click="newUser(elemento,index)">
                             <div class="img-contatti">
                                 <img v-bind:src="'img/Img/avatar' + elemento.avatar + '.jpg'" alt="avatar">
                             </div>
-                            <h2 id="user">{{elemento.name}}</h2>
+                            <h2>{{elemento.name}}</h2>
                         </div>
                     </div>
                         
